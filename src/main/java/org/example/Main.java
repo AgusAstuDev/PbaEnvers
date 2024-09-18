@@ -86,12 +86,12 @@ public class Main {
 
             Factura factura1 = entityManager.find(Factura.class, 1L);
 
-            factura1.setNumero(85);
+            /* factura1.setNumero(85); */
 
-            entityManager.merge(factura1);
+            entityManager.remove(factura1);
 
             entityManager.flush();
-            
+
             entityManager.getTransaction().commit();
 
         }catch (Exception e){
