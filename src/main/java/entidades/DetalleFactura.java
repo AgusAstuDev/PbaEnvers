@@ -3,6 +3,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -11,6 +12,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "detallefactura")
+@Audited
 public class DetalleFactura implements Serializable{
     private static final long serialVersionUID = 1L;
 

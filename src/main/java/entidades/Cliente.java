@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,6 +15,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "cliente")
+@Audited
 public class Cliente implements Serializable {
     private static final long serialVersionUID = 1L;
 

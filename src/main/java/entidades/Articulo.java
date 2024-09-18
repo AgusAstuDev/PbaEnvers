@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,6 +15,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "articulo")
+@Audited
 public class Articulo implements Serializable {
     private static final long serialVersionUID = 1L;
 

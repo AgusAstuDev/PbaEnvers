@@ -15,7 +15,7 @@ public class Main {
         try {
             entityManager.getTransaction().begin(); // Inicio transaccion
 
-            Factura factura1 = Factura.builder() // Creo Factura
+          /*  Factura factura1 = Factura.builder() // Creo Factura
                     .numero(1)
                     .total(3000)
                     .build();
@@ -82,13 +82,16 @@ public class Main {
             factura1.getDetalleFactura().add(detalleFactura2);
             detalleFactura2.setFactura(factura1);
 
-            factura1.setTotal(5400);
+            factura1.setTotal(5400); */
 
-            System.out.println(factura1);
+            Factura factura1 = entityManager.find(Factura.class, 1L);
 
-            entityManager.persist(factura1);
+            factura1.setNumero(85);
+
+            entityManager.merge(factura1);
 
             entityManager.flush();
+            
             entityManager.getTransaction().commit();
 
         }catch (Exception e){

@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 @Getter
 @Setter
@@ -15,6 +16,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name="factura")
+@Audited
 public class Factura implements Serializable{
     private static final long serialVersionUID=1L;
 

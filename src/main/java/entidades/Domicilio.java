@@ -4,6 +4,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 
 @AllArgsConstructor
@@ -13,6 +14,7 @@ import lombok.*;
 @Builder
 @Entity //va a ser una entidad y se va a guardar en la DB
 @Table(name = "domicilio") //nombre en tabla
+@Audited
 public class Domicilio implements Serializable{
     private static final long serialVersionUID=1L;
 
